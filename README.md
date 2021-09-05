@@ -1,16 +1,16 @@
-#  Login System and User Registraiton System in nodejs with mongodb express
+#  Login System and User Registraiton System in nodejs with mongodb and express
  
 
 ## Features login system
  
  
-password hashing
+-password hashing
 
-user authentication
+-user authentication
 
-mongodb Nosql database 
+-mongodb Nosql database 
 
-full user login and Registrationsystem
+-full user login and RegistrationSystem
   
   ## Require Package 
 
@@ -18,10 +18,10 @@ full user login and Registrationsystem
 	  npm install express
 	  npm install mongoose
 	  npm install hbs
-      npm install cookie-parser
-      npm install jsonwebtoken
-      npm install dotenv
-      npm install bcryptjs
+          npm install cookie-parser
+          npm install jsonwebtoken
+          npm install dotenv
+          npm install bcryptjs
 ```
 # hashing function 
     // function convert user password into hash    //password and store hash password in database
@@ -32,7 +32,7 @@ full user login and Registrationsystem
     });
     //compare hashpassword and userpassword when   //user login
     bcrypt.compareSync(password, data.passwordhash)
-# functin(Genrate Token)
+# function(Genrate Token)
     userSchema.methods.genrateToken = async function () {
     try {
         const token = await jwt.sign({ _id: this._id.toString()}, "process.env.SECRET_KEY")
